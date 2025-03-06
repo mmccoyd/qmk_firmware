@@ -1,4 +1,4 @@
-// Copyright 2022 Michael McCoyd (@mmccoyd)
+// Copyright 2025 Michael McCoyd (@mmccoyd)
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H
@@ -45,11 +45,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      KC_INS,  KC_EXLM, KC_AT  , KC_HASH, KC_DLR , KC_PERC,                                        KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL,
      xxxxxxx, KC_BSLS, KC_MINS, KC_EQL , KC_LBRC, KC_RBRC,                                        KC_HOME, KC_RSFT, KC_RCTL, KC_LALT, KC_RGUI, KC_END,
      _______, KC_PIPE, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, ALT_GR ,                      KC_APP , KC_MUTE, KC_VOLD, KC_VOLU, KC_MPLY, xxxxxxx, KC_RCTL,
-                                         _______, _______, _______, LY_ADJ ,    _______, _______, _______, _______ 
+                                         _______, _______, _______, LY_ADJ ,    _______, _______, _______, _______
     ),
     [_ADJUST] = LAYOUT(
      xxxxxxx, xxxxxxx, xxxxxxx, xxxxxxx, AG_SWAP, CG_SWAP,                                        xxxxxxx, KC_F11 , KC_F12 , KC_PSCR, xxxxxxx, EE_CLR,
-     xxxxxxx, xxxxxxx, KC_BRID, KC_BRIU, AG_NORM, CG_NORM,                                        UG_NEXT, UG_VALU, UG_HUEU, UG_SATU, xxxxxxx, xxxxxxx, 
+     xxxxxxx, xxxxxxx, KC_BRID, KC_BRIU, AG_NORM, CG_NORM,                                        UG_NEXT, UG_VALU, UG_HUEU, UG_SATU, xxxxxxx, xxxxxxx,
      xxxxxxx, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, xxxxxxx, xxxxxxx,                      UG_TOGG, UG_PREV, UG_VALD, UG_HUED, UG_SATD, xxxxxxx, QK_BOOT,
                                          xxxxxxx, xxxxxxx, xxxxxxx, _______,    _______, xxxxxxx, xxxxxxx, xxxxxxx
     ),
@@ -57,8 +57,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 //  Template:
 //    [_INDEX] = LAYOUT(
-//     _______, _______, _______, _______, _______, _______,                                        _______, _______, _______, _______, _______, _______, 
-//     _______, _______, _______, _______, _______, _______,                                        _______, _______, _______, _______, _______, _______, 
+//     _______, _______, _______, _______, _______, _______,                                        _______, _______, _______, _______, _______, _______,
+//     _______, _______, _______, _______, _______, _______,                                        _______, _______, _______, _______, _______, _______,
 //     _______, _______, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______, _______,
 //                                         _______, _______, _______, _______,    _______, _______, _______, _______
 //    ),
