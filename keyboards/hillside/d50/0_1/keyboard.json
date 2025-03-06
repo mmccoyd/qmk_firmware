@@ -1,117 +1,120 @@
 {
     "bootloader": "rp2040",
-    "development_board": "promicro_rp2040",
-    "pin_compatible": "promicro",
-    "processor": "RP2040",
-
     "build": {
         "lto": true
     },
+    "caps_word": {
+        "enabled": true
+    },
+    "development_board": "promicro_rp2040",
+    "diode_direction": "COL2ROW",
     "features": {
         "extrakey": true,
         "rgblight": true
     },
-
-    "caps_word": {
-        "enabled": true,
-    },
-
-    "diode_direction": "COL2ROW",
     "matrix_pins": {
-        "cols": ["GP27", "GP26", "GP22", "GP20", "GP23", "GP21"]
-        "rows": ["GP0", "GP5", "GP6", "GP8", "GP9"],
-     },
-
+        "cols": ["GP27", "GP26", "GP22", "GP20", "GP23", "GP21"],
+        "rows": ["GP0", "GP5", "GP6", "GP8", "GP9"]
+    },
+    "pin_compatible": "promicro",
+    "processor": "RP2040",
     "rgblight": {
-        "led_count": 4,
-        "brightness_steps": 8,
-        "hue_steps": 8,
-        "saturation_steps": 8,
-        "sleep": true
-        "split": true,
-        "split_count": [2, 2],
         "animations": {
             "rainbow_mood": true,
             "rainbow_swirl": true,
-            "snake": true,
-            },
+            "snake": true
+        },
+        "brightness_steps": 8,
+        "hue_steps": 8,
+        "led_count": 4,
+        "saturation_steps": 8,
+        "sleep": true,
+        "split": true,
+        "split_count": [2, 2]
     },
-
     "split": {
         "enabled": true,
         "serial": {
             "driver": "vendor",
-            "pin": "GP29",
+            "pin": "GP29"
         }
     },
-
     "usb": {
-      "vid": "0x4D4D",
-      "pid": "0x4850",
-      "device_version": "0.0.1"
+        "device_version": "0.0.1",
+        "pid": "0x4850",
+        "vid": "0x4D4D"
     },
-
     "ws2812": {
-            "driver": "vendor",
-            "pin": "GP7",
+        "driver": "vendor",
+        "pin": "GP7"
     },
-
     "layouts": {
         "LAYOUT": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 1.13, hand: "L",},
-                {"matrix": [0, 1], "x": 1, "y": 0.93, hand: "L", label: "Q"},
-                {"matrix": [0, 2], "x": 2.1, "y": 0.31},
-                {"matrix": [0, 3], "x": 3.2, "y": 0},
-                {"matrix": [0, 4], "x": 4.2, "y": 0.28},
-                {"matrix": [0, 5], "x": 5.2, "y": 0.42},
+                {"label": "`~", "matrix": [0, 0], "x": 0, "y": 0, "hand": "L"},
+                {"label": "Q", "matrix": [0, 1], "x": 1, "y": 0, "hand": "L"},
+                {"label": "W", "matrix": [0, 2], "x": 2.1, "y": 0},
+                {"label": "E", "matrix": [0, 3], "x": 3.2, "y": 0},
+                {"label": "R", "matrix": [0, 4], "x": 4.3, "y": 0},
+                {"label": "T", "matrix": [0, 5], "x": 5.3, "y": 0},
 
-                {"matrix": [4, 5], "x": 9.7, "y": 0.42},
-                {"matrix": [4, 4], "x": 10.7, "y": 0.28},
-                {"matrix": [4, 3], "x": 11.7, "y": 0},
-                {"matrix": [4, 2], "x": 12.8, "y": 0.31},
-                {"matrix": [4, 1], "x": 13.9, "y": 0.93},
-                {"matrix": [4, 0], "x": 14.9, "y": 1.13},
+                {"label": "Y", "matrix": [5, 5], "x": 11, "y": 0},
+                {"label": "U", "matrix": [5, 4], "x": 12, "y": 0},
+                {"label": "I", "matrix": [5, 3], "x": 13.1, "y": 0},
+                {"label": "O", "matrix": [5, 2], "x": 14.2, "y": 0},
+                {"label": "P", "matrix": [5, 1], "x": 15.3, "y": 0},
+                {"label": "BACKSPACE", "matrix": [5, 0], "x": 16.3, "y": 0},
 
-                {"matrix": [1, 0], "x": 0.1, "y": 2.13},
-                {"matrix": [1, 1], "x": 1.1, "y": 1.93},
-                {"matrix": [1, 2], "x": 2.15, "y": 1.31},
-                {"matrix": [1, 3], "x": 3.2, "y": 1},
-                {"matrix": [1, 4], "x": 4.2, "y": 1.28},
-                {"matrix": [1, 5], "x": 5.2, "y": 1.42},
 
-                {"matrix": [5, 5], "x": 9.7, "y": 1.42},
-                {"matrix": [5, 4], "x": 10.7, "y": 1.28},
-                {"matrix": [5, 3], "x": 11.7, "y": 1},
-                {"matrix": [5, 2], "x": 12.75, "y": 1.31},
-                {"matrix": [5, 1], "x": 13.8, "y": 1.93},
-                {"matrix": [5, 0], "x": 14.8, "y": 2.13},
+                {"label": "TAB", "matrix": [1, 0], "x": 0, "y": 1},
+                {"label": "A", "matrix": [1, 1], "x": 1, "y": 1},
+                {"label": "S", "matrix": [1, 2], "x": 2.1, "y": 1},
+                {"label": "D", "matrix": [1, 3], "x": 3.2, "y": 1},
+                {"label": "F", "matrix": [1, 4], "x": 4.3, "y": 1},
+                {"label": "G", "matrix": [1, 5], "x": 5.3, "y": 1},
 
-                {"matrix": [2, 0], "x": 0.2, "y": 3.13},
-                {"matrix": [2, 1], "x": 1.2, "y": 2.93},
-                {"matrix": [2, 2], "x": 2.2, "y": 2.31},
-                {"matrix": [2, 3], "x": 3.2, "y": 2},
-                {"matrix": [2, 4], "x": 4.2, "y": 2.28},
-                {"matrix": [2, 5], "x": 5.2, "y": 2.42},
-                {"matrix": [3, 5], "x": 6.2, "y": 2.88},
+                {"label": "H", "matrix": [6, 5], "x": 11, "y": 1},
+                {"label": "J", "matrix": [6, 4], "x": 12, "y": 1},
+                {"label": "K", "matrix": [6, 3], "x": 13.1, "y": 1},
+                {"label": "L", "matrix": [6, 2], "x": 14.2, "y": 1},
+                {"label": ";:", "matrix": [6, 1], "x": 15.3, "y": 1},
+                {"label": "RETURN", "matrix": [6, 0], "x": 16.3, "y": 1},
 
-                {"matrix": [7, 5], "x": 8.7, "y": 2.88},
-                {"matrix": [6, 5], "x": 9.7, "y": 2.42},
-                {"matrix": [6, 4], "x": 10.7, "y": 2.28},
-                {"matrix": [6, 3], "x": 11.7, "y": 2},
-                {"matrix": [6, 2], "x": 12.7, "y": 2.31},
-                {"matrix": [6, 1], "x": 13.7, "y": 2.93},
-                {"matrix": [6, 0], "x": 14.7, "y": 3.13},
 
-                {"matrix": [3, 1], "x": 3.7, "y": 3.28},
-                {"matrix": [3, 2], "x": 4.7, "y": 3.42},
-                {"matrix": [3, 3], "x": 5.7, "y": 3.88},
-                {"matrix": [3, 4], "x": 6.7, "y": 4.44},
+                {"label": "SHIFT", "matrix": [2, 0], "x": 0, "y": 2},
+                {"label": "Z", "matrix": [2, 1], "x": 1, "y": 2},
+                {"label": "X", "matrix": [2, 2], "x": 2.1, "y": 2},
+                {"label": "C", "matrix": [2, 3], "x": 3.2, "y": 2},
+                {"label": "V", "matrix": [2, 4], "x": 4.3, "y": 2},
+                {"label": "B", "matrix": [2, 5], "x": 5.3, "y": 2},
 
-                {"matrix": [7, 4], "x": 8.2, "y": 4.44},
-                {"matrix": [7, 3], "x": 9.2, "y": 3.88},
-                {"matrix": [7, 2], "x": 10.2, "y": 3.42},
-                {"matrix": [7, 1], "x": 11.2, "y": 3.28}
+                {"label": "CTRL", "matrix": [4, 1], "x": 6.4, "y": 2.2},
+                {"label": "'\"", "matrix": [4, 2], "x": 7.4, "y": 2.2},
+
+                {"label": "ESC", "matrix": [9, 1], "x": 8.9, "y": 2.2},
+                {"label": "ALT", "matrix": [9, 2], "x": 9.9, "y": 2.2},
+
+                {"label": "N", "matrix": [7, 5], "x": 11, "y": 2},
+                {"label": "M", "matrix": [7, 4], "x": 12, "y": 2},
+                {"label": ",<", "matrix": [7, 3], "x": 13.1, "y": 2},
+                {"label": ".>", "matrix": [7, 2], "x": 14.2, "y": 2},
+                {"label": "/?", "matrix": [7, 1], "x": 15.3, "y": 2},
+                {"label": "SHIFT", "matrix": [7, 0], "x": 16.3, "y": 2},
+
+
+                {"label": "LEFT", "matrix": [3, 2], "x": 2.1, "y": 3},
+                {"label": "RIGHT", "matrix": [3, 3], "x": 3.2, "y": 3},
+
+                {"label": "GUI", "matrix": [4, 5], "x": 5.4, "y": 3.2},
+                {"label": "SHIFT", "matrix": [4, 4], "x": 6.4, "y": 3.2},
+                {"label": "Nav", "matrix": [4, 3], "x": 7.4, "y": 3.2},
+
+                {"label": "Sym", "matrix": [9, 3], "x": 8.9, "y": 3.2},
+                {"label": "SPACE", "matrix": [9, 4], "x": 9.9, "y": 3.2},
+                {"label": "MUTE", "matrix": [9, 5], "x": 10.9, "y": 3.2},
+
+                {"label": "UP", "matrix": [8, 3], "x": 13.1, "y": 3},
+                {"label": "DOWN", "matrix": [8, 2], "x": 14.2, "y": 3}
             ]
         }
     }
