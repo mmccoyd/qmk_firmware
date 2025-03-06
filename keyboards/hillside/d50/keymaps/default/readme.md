@@ -8,6 +8,12 @@ make hillside/d50:default:flash
 
 ```
 
+For the first time with each side:
+
+    qmk flash -kb hillside/d50/0_1 -km default -bl uf2-split-left
+    qmk flash -kb hillside/d50/0_1 -km default -bl uf2-split-right
+
+
 It also serves as a simple, clean layout 
   to verify that the configuration and switches work.
 Use the [QMK Configurator Tester](https://config.qmk.fm/#/test) 
