@@ -1,52 +1,47 @@
 {
-    "processor": "atmega32u4",
-    "bootloader": "atmel-dfu",
+    "processor": "RP2040",
+    "bootloader": "rp2040",
     "matrix_pins": {
-        "rows": ["C6", "D7", "E6", "B5"],
-        "cols": ["F6", "F7", "B1", "B3", "B2", "B6"]
+        "rows": ["GP0", "GP5", "GP6", "GP8", "GP9"],
+        "cols": ["GP27", "GP26", "GP22", "GP20", "GP23", "GP21"]
      },
     "diode_direction": "COL2ROW",
     "usb": {
       "vid": "0x4D4D",
-      "pid": "0x4846",
+      "pid": "0x4850",
       "device_version": "0.0.1"
-    },
-    "encoder": {
-        "rotary": [
-            {"pin_a": "F5", "pin_b": "F4"}
-        ]
     },
     "build": {
         "lto": true
     },
     "features": {
-        "encoder": true,
         "extrakey": true,
         "rgblight": true
     },
     "split": {
         "enabled": true,
-        "encoder": {
-            "right": {
-                "rotary": [
-                    {"pin_a": "F4", "pin_b": "F5"}
-                ]
-            }
-        },
         "serial": {
-            "pin": "D2"
+            "driver": "vendor",
+            "pin": "GP29",
         }
     },
     "rgblight": {
         "led_count": 4,
         "split": true,
+        "split_count": [2, 2],
         "hue_steps": 8,
         "saturation_steps": 8,
         "brightness_steps": 8,
         "sleep": true
+        "animations": {
+            "rainbow_mood": true,
+            "rainbow_swirl": true,
+            "snake": true,
+            },
     },
     "ws2812": {
-        "pin": "D3"
+            "driver": "vendor",
+            "pin": "GP7",
     },
     "layouts": {
         "LAYOUT": {
