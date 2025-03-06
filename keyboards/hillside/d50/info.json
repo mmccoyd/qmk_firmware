@@ -1,7 +1,7 @@
 {
     "manufacturer": "mmccoyd",
     "maintainer": "mmccoyd",
-    "keyboard_name": "Hillside 46",
+    "keyboard_name": "Hillside D50",
     "url": "http://github.com/mmccoyd/hillside/",
-    "tags": ["split", "column stagger", "choc v1", "choc spaced"]
+    "tags": ["dactyl", "split", "column stagger", "choc v1", "choc spaced"]
 }
