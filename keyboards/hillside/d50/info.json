@@ -1,7 +1,8 @@
 {
     "manufacturer": "mmccoyd",
     "maintainer": "mmccoyd",
+    "bootloader_instructions": "Double press the button on the PCB back.",
     "keyboard_name": "Hillside D50",
-    "url": "http://github.com/mmccoyd/hillside/",
     "tags": ["dactyl", "split", "column stagger", "choc v1", "choc spaced"]
+    "url": "http://github.com/mmccoyd/hillside/",
 }
