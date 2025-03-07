@@ -1,16 +1,9 @@
 {
-    "processor": "RP2040",
     "bootloader": "rp2040",
-    "matrix_pins": {
-        "rows": ["GP0", "GP5", "GP6", "GP8", "GP9"],
-        "cols": ["GP27", "GP26", "GP22", "GP20", "GP23", "GP21"]
-     },
-    "diode_direction": "COL2ROW",
-    "usb": {
-      "vid": "0x4D4D",
-      "pid": "0x4850",
-      "device_version": "0.0.1"
-    },
+    "development_board": "promicro_rp2040",
+    "pin_compatible": "promicro",
+    "processor": "RP2040",
+
     "build": {
         "lto": true
     },
@@ -18,6 +11,32 @@
         "extrakey": true,
         "rgblight": true
     },
+
+    "caps_word": {
+        "enabled": true,
+    },
+
+    "diode_direction": "COL2ROW",
+    "matrix_pins": {
+        "cols": ["GP27", "GP26", "GP22", "GP20", "GP23", "GP21"]
+        "rows": ["GP0", "GP5", "GP6", "GP8", "GP9"],
+     },
+
+    "rgblight": {
+        "led_count": 4,
+        "brightness_steps": 8,
+        "hue_steps": 8,
+        "saturation_steps": 8,
+        "sleep": true
+        "split": true,
+        "split_count": [2, 2],
+        "animations": {
+            "rainbow_mood": true,
+            "rainbow_swirl": true,
+            "snake": true,
+            },
+    },
+
     "split": {
         "enabled": true,
         "serial": {
@@ -25,29 +44,23 @@
             "pin": "GP29",
         }
     },
-    "rgblight": {
-        "led_count": 4,
-        "split": true,
-        "split_count": [2, 2],
-        "hue_steps": 8,
-        "saturation_steps": 8,
-        "brightness_steps": 8,
-        "sleep": true
-        "animations": {
-            "rainbow_mood": true,
-            "rainbow_swirl": true,
-            "snake": true,
-            },
+
+    "usb": {
+      "vid": "0x4D4D",
+      "pid": "0x4850",
+      "device_version": "0.0.1"
     },
+
     "ws2812": {
             "driver": "vendor",
             "pin": "GP7",
     },
+
     "layouts": {
         "LAYOUT": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 1.13},
-                {"matrix": [0, 1], "x": 1, "y": 0.93},
+                {"matrix": [0, 0], "x": 0, "y": 1.13, hand: "L",},
+                {"matrix": [0, 1], "x": 1, "y": 0.93, hand: "L", label: "Q"},
                 {"matrix": [0, 2], "x": 2.1, "y": 0.31},
                 {"matrix": [0, 3], "x": 3.2, "y": 0},
                 {"matrix": [0, 4], "x": 4.2, "y": 0.28},
