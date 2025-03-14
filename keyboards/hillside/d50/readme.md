@@ -19,8 +19,14 @@ Flashing example for this keyboard:
 
     make hillside/d50/0_1:default:flash
 
+For the first time with each side:
+
     qmk flash -kb hillside/d50/0_1 -km default -bl uf2-split-left
     qmk flash -kb hillside/d50/0_1 -km default -bl uf2-split-right
+
+After that:
+
+    qmk flash -kb hillside/d50/0_1 -km default
 
 ## Bootloader
 
