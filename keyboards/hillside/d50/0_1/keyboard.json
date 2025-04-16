@@ -36,7 +36,6 @@
         "enabled": true,
         "serial": {
             "driver": "vendor",
-            "pin": "GP29"
         }
     },
     "usb": {
