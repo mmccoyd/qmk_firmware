@@ -1,8 +1,9 @@
 # Hillside Dactyl 50
 
-![hillside](https://imgur.com/VFA9E4Yh.png)
+![hillside](https://imgur.com/uFM9boC.png)
 
-[Hillside Dactyl 50](https://github.com/mmccoyd/hillside)
+
+[Hillside Dactyl 50](https://github.com/mmccoyd/hillside_dactyl_50)
     is a Dactyl choc-spaced split ergonomic keyboard with
     three main rows of six, a lower row of two, and five thumb keys keys
     per side.
@@ -10,6 +11,10 @@
 * Keyboard Maintainer: [Michael McCoyd](https://github.com/mmccoyd)
 * Hardware Supported: ProMicro RP2040 and compatible
 * Hardware Availability: https://github.com/mmccoyd/hillside
+
+Split is configured as dual wire.
+
+## Make and flash
 
 Make example for this keyboard (after setting up your build environment):
 
@@ -19,7 +24,7 @@ Flashing example for this keyboard:
 
     make hillside/d50/0_1:default:flash
 
-For the first time with each side:
+Flashing for the first time with each side:
 
     qmk flash -kb hillside/d50/0_1 -km default -bl uf2-split-left
     qmk flash -kb hillside/d50/0_1 -km default -bl uf2-split-right
