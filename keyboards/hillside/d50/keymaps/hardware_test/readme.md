@@ -3,9 +3,15 @@
 The make and flash commands are
 
 ```
-make hillside/d50:hardware_test
-make hillside/d50:hardware_test:flash
+make hillside/d50/0_1:hardware_test
+make hillside/d50/0_1:hardware_test:flash
 ```
+
+For the first time with each side:
+
+    qmk flash -kb hillside/d50/0_1 -km hardware_test -bl uf2-split-left
+    qmk flash -kb hillside/d50/0_1 -km hardware_test -bl uf2-split-right
+
 
 This is a simple keymap to verify that the hardware and switches work
     and are wired as expected. It has keys on the base layer to
@@ -21,10 +27,13 @@ Use the [QMK Configurator Tester](https://config.qmk.fm/#/test)
     to see that the switches produce output in the expected order.
 
 The LEDs should glow a nice red.
-If they don't,
-    you may need to clear the persistent EEPROM settings with the EE_CLR key,
-    or enable them with the UG_TOGG key,
-    both of which are part of this keymap.
+If they don't, you may need to:
+
+-   Enable their physical power switch, or
+-   Clear the persistent EEPROM settings with the EE_CLR key, and
+-   Enable them with the UG_TOGG key.
+
+Both of those keys are part of this keymap.
 
 Further tests can be done with the default keymap to check the switches
 that were reserved here for clearing the flash memory.

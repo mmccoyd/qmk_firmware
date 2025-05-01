@@ -3,8 +3,8 @@
 The make and flash commands are
 
 ```
-make hillside/d50:default
-make hillside/d50:default:flash
+make hillside/d50/0_1:default
+make hillside/d50/0_1:default:flash
 
 ```
 
