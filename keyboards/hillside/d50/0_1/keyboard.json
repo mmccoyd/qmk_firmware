@@ -90,8 +90,8 @@
                 {"label": "CTRL", "matrix": [4, 1], "x": 6.4, "y": 2.2},
                 {"label": "'\"", "matrix": [4, 2], "x": 7.4, "y": 2.2},
 
-                {"label": "ESC", "matrix": [9, 1], "x": 8.9, "y": 2.2},
-                {"label": "ALT", "matrix": [9, 2], "x": 9.9, "y": 2.2},
+                {"label": "ESC", "matrix": [9, 2], "x": 8.9, "y": 2.2},
+                {"label": "ALT", "matrix": [9, 1], "x": 9.9, "y": 2.2},
 
                 {"label": "N", "matrix": [7, 5], "x": 11, "y": 2},
                 {"label": "M", "matrix": [7, 4], "x": 12, "y": 2},
